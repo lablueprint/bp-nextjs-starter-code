@@ -1,23 +1,22 @@
+'use client';
+
 import { Box, Container, Typography } from "@mui/material";
 import Link from "next/link";
-
-// TODO: Remove global data
-const resources = [
-    {
-        id: 1,
-        title: "Building a website"
-    },
-    {
-        id: 2,
-        title: "Fixing a bug"
-    },
-    {
-        id: 3,
-        title: "Asking for help"
-    }
-]
+import { useEffect, useState } from "react";
 
 export default function ResourcesPage() {
+    const [resources, setResources] = useState([]);
+
+    const getResources = async () => {
+        const response = await fetch("api/resources");
+        const fetchData = await response.json();
+        setResources(fetchData.resources);
+    }
+
+    useEffect(() => {
+        getResources();
+    }, []);
+
     return(
         <Container>
             <Box>
