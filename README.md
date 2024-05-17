@@ -38,7 +38,11 @@
 
 
 ## Copy Instructions
-`npm i`
+1) Clone the repo to your local setup by running `git clone https://github.com/lablueprint/bp-nextjs-starter-code.git` in your terminal the directory .
+
+2) Enter the new folder via `cd bp-nextjs-starter-code`.
+
+3) Install the necessary modules to run the application by running `npm install`.
 
 ## Running
-`npm run dev`
+To run your app locally, run `npm run dev` in terminal in the directory with all the code.
